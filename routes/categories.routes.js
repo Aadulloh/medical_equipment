@@ -19,7 +19,7 @@ router.post(
   roleGuard(["admin"]),
   addNewCategory
 );
-router.get("/", authGuard, findAllCategories);
+router.get("/", findAllCategories);
 router.get("/:id", authGuard, findCategoryById);
 router.delete("/:id", authGuard, roleGuard(["admin"]), deleteCategory);
 router.put(
